@@ -1,0 +1,7 @@
+<h1>Home</h1>
+<% @chart_data.each do |chart| %>
+  <div>
+
+    <%= line_chart chart[:data], min: (chart[:data].values.max.to_i + 0.5), min: (chart[:data].values.min.to_i - 0.5) %>
+  </div>
+<% end %>
